@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './SignLinkButton.css';
 
 interface SignButtonProps {
   signSentence: string;
@@ -12,7 +13,7 @@ export default function SignButton({
   signRoute
 }: SignButtonProps) {
   return (
-    <button className="btn d-block" type="button">
+    <button type="button" className="signLinkButton">
       {signSentence} <Link to={signRoute}>{signCTA}</Link>
     </button>
   );

@@ -2,8 +2,9 @@ import './Container.css';
 
 interface ContainerProps {
   children: JSX.Element;
+  customClass: string;
 }
 
-export default function Container({ children }: ContainerProps) {
-  return <div className="min-vh-100 wrapper">{children}</div>;
+export default function Container({ children, customClass }: ContainerProps) {
+  return <div className={`wrapper ${customClass}`}>{children}</div>;
 }

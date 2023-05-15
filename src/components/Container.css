@@ -1,3 +1,111 @@
 .wrapper {
-  background-color: #282828;
+  min-height: 100vh;
+}
+
+.wrapper.signin,
+.wrapper.signup {
+  align-items: center;
+  background-color: #272626;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+:is(.wrapper.signin, .wrapper.signup) form {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px #a09e9e;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: end;
+  margin: auto;
+  max-width: 350px;
+  padding-inline: 40px;
+  position: relative;
+  width: 100%;
+}
+.wrapper.signin form {
+  min-height: 300px;
+  padding-bottom: 45px;
+}
+
+.wrapper.signup form {
+  min-height: 340px;
+  padding-bottom: 35px;
+}
+
+:is(.wrapper.signin, .wrapper.signup) h1 {
+  font-size: 30px;
+}
+
+:is(.wrapper.signin, .wrapper.signup) img {
+  border-radius: 50%;
+  filter: drop-shadow(0 0 9px #5c5353);
+  max-width: 140px;
+  position: absolute;
+  top: -70px;
+  width: 100%;
+}
+
+:is(.wrapper.signin, .wrapper.signup) .form-box {
+  align-items: center;
+  background-color: #454545;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+:is(.wrapper.signin, .wrapper.signup) .form-box input {
+  background-color: #808080;
+  border: none;
+  color: #fff;
+  padding: 8px;
+  width: 85%;
+}
+
+.form-box input::placeholder {
+  color: #fdeee7;
+}
+
+:is(.wrapper.signin, .wrapper.signup) .form-box label {
+  width: 15%;
+}
+
+:is(.wrapper.signin, .wrapper.signup) .form-box svg {
+  display: block;
+  fill: #fff;
+  height: 18px;
+  margin: auto;
+  width: 100%;
+}
+
+:is(.wrapper.signin, .wrapper.signup) a {
+  color: inherit;
+}
+
+:is(.wrapper.signin, .wrapper.signup) a:hover {
+  font-weight: 500;
+}
+
+:is(.wrapper.signin, .wrapper.signup) button:last-child {
+  background-color: #846d62;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 300px;
+  padding-block: 10px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+}
+
+:is(.wrapper.signin, .wrapper.signup) button:last-child:hover {
+  background-color: #a78c80;
+}
+
+:is(.wrapper.signin, .wrapper.signup) button:last-child:active {
+  background-color: #68564e;
 }

@@ -1,25 +1,31 @@
 import AB_LOGO_DARK_THEME from '../../../assets/img/logos/ab-logo-dark-theme.png';
 import Container from '../../Container';
-import SignButton from './SignButton';
+import SignLinkButton from './SignLinkButton';
+import { FaUser, FaLock } from 'react-icons/fa';
 
 export default function SignIn() {
-  return (
-    <Container>
-      {/* <Form isSignIn={true} /> */}
-      <form className="bg-white">
-        <img
-          className="img-fluid rounded mx-auto d-block"
-          src={AB_LOGO_DARK_THEME}
-          alt="Logo do Advogados Brasil"
-        />
+  function handleSubmit(e: any) {
+    e.preventDefault();
+  }
 
-        <div className="mb-3">
-          <label htmlFor="email"></label>
+  return (
+    <Container customClass="signin">
+      <form onSubmit={e => handleSubmit(e)}>
+        <img src={AB_LOGO_DARK_THEME} alt="Logo do Advogados Brasil" />
+
+        <h1>Advogados Brasil</h1>
+
+        <div className="form-box">
+          <label htmlFor="email">
+            <FaUser />
+          </label>
           <input type="text" id="email" placeholder="Digite seu e-mail..." />
         </div>
 
-        <div className="mb-3">
-          <label htmlFor="password"></label>
+        <div className="form-box">
+          <label htmlFor="password">
+            <FaLock />
+          </label>
           <input
             type="password"
             id="password"
@@ -27,15 +33,13 @@ export default function SignIn() {
           />
         </div>
 
-        <SignButton
+        <SignLinkButton
           signSentence="Não tem uma conta?"
           signCTA="Cadastre-se"
           signRoute="/signup"
         />
 
-        <button type="button" className="btn btn-dark btn-lg">
-          Entrar
-        </button>
+        <button type="submit">Entrar</button>
       </form>
     </Container>
   );

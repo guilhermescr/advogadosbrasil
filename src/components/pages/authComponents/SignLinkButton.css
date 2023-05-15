@@ -1,0 +1,6 @@
+.signLinkButton {
+  background-color: transparent;
+  border: none;
+  cursor: default !important;
+  margin-top: 8px;
+}
