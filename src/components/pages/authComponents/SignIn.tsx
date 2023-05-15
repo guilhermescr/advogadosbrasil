@@ -1,7 +1,7 @@
 import AB_LOGO_DARK_THEME from '../../../assets/img/logos/ab-logo-dark-theme.png';
 import Container from '../../Container';
+import FormBox from './FormBox';
 import SignLinkButton from './SignLinkButton';
-import { FaUser, FaLock } from 'react-icons/fa';
 
 export default function SignIn() {
   function handleSubmit(e: any) {
@@ -15,23 +15,17 @@ export default function SignIn() {
 
         <h1>Advogados Brasil</h1>
 
-        <div className="form-box">
-          <label htmlFor="email">
-            <FaUser />
-          </label>
-          <input type="text" id="email" placeholder="Digite seu e-mail..." />
-        </div>
+        <FormBox
+          inputType="email"
+          id="email"
+          placeholder="Digite seu e-mail..."
+        />
 
-        <div className="form-box">
-          <label htmlFor="password">
-            <FaLock />
-          </label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Digite sua senha..."
-          />
-        </div>
+        <FormBox
+          inputType="password"
+          id="password"
+          placeholder="Digite sua senha..."
+        />
 
         <SignLinkButton
           signSentence="Não tem uma conta?"

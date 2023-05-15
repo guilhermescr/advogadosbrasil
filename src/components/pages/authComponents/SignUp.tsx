@@ -1,5 +1,6 @@
 import AB_LOGO_DARK_THEME from '../../../assets/img/logos/ab-logo-dark-theme.png';
 import Container from '../../Container';
+import FormBox from './FormBox';
 import SignLinkButton from './SignLinkButton';
 import { FaUser, FaLock } from 'react-icons/fa';
 
@@ -15,34 +16,23 @@ export default function SignUp() {
 
         <h1>Advogados Brasil</h1>
 
-        <div className="form-box">
-          <label htmlFor="email">
-            <FaUser />
-          </label>
-          <input type="text" id="email" placeholder="Digite seu e-mail..." />
-        </div>
+        <FormBox
+          inputType="email"
+          id="email"
+          placeholder="Digite seu e-mail..."
+        />
 
-        <div className="form-box">
-          <label htmlFor="password">
-            <FaLock />
-          </label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Digite sua senha..."
-          />
-        </div>
+        <FormBox
+          inputType="password"
+          id="password"
+          placeholder="Digite sua senha..."
+        />
 
-        <div className="form-box">
-          <label htmlFor="confirmPassword">
-            <FaLock />
-          </label>
-          <input
-            type="password"
-            id="confirmPassword"
-            placeholder="Digite a senha de novo..."
-          />
-        </div>
+        <FormBox
+          inputType="password"
+          id="confirmPassword"
+          placeholder="Digite a senha de novo..."
+        />
 
         <SignLinkButton
           signSentence="Já tem uma conta?"
