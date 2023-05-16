@@ -1,16 +1,17 @@
 import AB_LOGO_DARK_THEME from '../../../assets/img/logos/ab-logo-dark-theme.png';
-import Container from '../../Container';
 import FormBox from './FormBox';
+import SignContainer from './SignContainer';
+import SignForm from './SignForm';
 import SignLinkButton from './SignLinkButton';
 
 export default function SignIn() {
-  function handleSubmit(e: any) {
-    e.preventDefault();
-  }
-
   return (
-    <Container customClass="signin">
-      <form onSubmit={e => handleSubmit(e)}>
+    <SignContainer>
+      <SignForm
+        customStyles={`
+          padding-top: 40px;
+        `}
+      >
         <img src={AB_LOGO_DARK_THEME} alt="Logo do Advogados Brasil" />
 
         <h1>Advogados Brasil</h1>
@@ -33,8 +34,8 @@ export default function SignIn() {
           signRoute="/signup"
         />
 
-        <button type="submit">Entrar</button>
-      </form>
-    </Container>
+        <button>Entrar</button>
+      </SignForm>
+    </SignContainer>
   );
 }
