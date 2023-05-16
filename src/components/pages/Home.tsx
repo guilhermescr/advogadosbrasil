@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+import Header from './header/Header';
 
 export default function Home() {
   return (
     <>
-      <h1>Início</h1>
-      <Link to="/signin" style={{ marginLeft: '15px' }}>
+      <Header />
+
+      <Link to="/signin" style={{ display: 'block', marginLeft: '15px' }}>
         Entrar
       </Link>
       <Link to="/signup" style={{ marginLeft: '15px' }}>

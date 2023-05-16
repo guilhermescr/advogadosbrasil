@@ -7,11 +7,7 @@ import SignLinkButton from './SignLinkButton';
 export default function SignIn() {
   return (
     <SignContainer>
-      <SignForm
-        customStyles={`
-          padding-top: 40px;
-        `}
-      >
+      <SignForm>
         <img src={AB_LOGO_DARK_THEME} alt="Logo do Advogados Brasil" />
 
         <h1>Advogados Brasil</h1>

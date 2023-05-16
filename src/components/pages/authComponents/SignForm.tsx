@@ -2,14 +2,9 @@ import styled from 'styled-components';
 
 interface SignFormProps {
   children: JSX.Element[];
-  customStyles: string;
 }
 
-interface SignFormStylesProps {
-  customStyles: string;
-}
-
-const SignFormStyles = styled.form<SignFormStylesProps>`
+const SignFormStyles = styled.form`
   align-items: center;
   background-color: #fff;
   border-radius: 20px;
@@ -21,10 +16,10 @@ const SignFormStyles = styled.form<SignFormStylesProps>`
   margin: auto;
   max-width: 350px;
   min-height: 300px;
-  padding-inline: 40px;
+  padding: 40px;
+  padding-bottom: 0;
   position: relative;
   width: 100%;
-  ${props => props.customStyles}
 
   & > h1 {
     font-size: 30px;
@@ -52,14 +47,12 @@ const SignFormStyles = styled.form<SignFormStylesProps>`
   }
 `;
 
-export default function SignForm({ children, customStyles }: SignFormProps) {
+export default function SignForm({ children }: SignFormProps) {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
   }
 
   return (
-    <SignFormStyles customStyles={customStyles} onSubmit={e => handleSubmit(e)}>
-      {children}
-    </SignFormStyles>
+    <SignFormStyles onSubmit={e => handleSubmit(e)}>{children}</SignFormStyles>
   );
 }
